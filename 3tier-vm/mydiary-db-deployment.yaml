@@ -5,7 +5,7 @@ metadata:
     io.kompose.service: mydiary-db
   name: mydiary-db
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       io.kompose.service: mydiary-db
@@ -34,8 +34,6 @@ spec:
           name: mydiary-db
           ports:
             - containerPort: 3306
-              hostPort: 13306
-              protocol: TCP
           resources: {}
       restartPolicy: Always
 status: {}

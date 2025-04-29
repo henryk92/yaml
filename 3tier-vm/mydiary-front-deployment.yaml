@@ -13,11 +13,10 @@ spec:
   template:
     metadata:
       labels:
-        io.kompose.network/3tier-rolling-fe-be: "true"
         io.kompose.service: mydiary-front
     spec:
       containers:
-        - image: henryk92/my-diary-front:1.0
+        - image: henryk92/my-diary-front:1.1
           name: mydiary-front
           ports:
             - containerPort: 3000
